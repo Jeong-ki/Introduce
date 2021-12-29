@@ -12,9 +12,10 @@ body {
 /* Header */
 header .introduce{
   display: flex;
+  justify-content: center;
   background-color: #F2E9D8;
+  padding-top: 70px;
   height: 500px;
-  padding: 0 320px;
   /* padding: 0 320px; */
 }
 header section {
@@ -51,12 +52,15 @@ header img {
 
 /* Navbar */
 nav {
-  font-family: Spoqa Han Sans Neo;
+  position: fixed;
   display: flex;
   justify-content: space-between;
   height: 70px;
+  width: 100%;
   background-color: #F2E9D8;
   align-items: center;
+  z-index: 1;
+  transition: all 0.5s;
 }
 nav .tit-logo {
   font-size: 20px;
@@ -91,6 +95,10 @@ nav .list-nav li:hover a {
   color: white;
 }
 
+.navbar-dark {
+  background-color: #f0e2c7;
+}
+
 /* Main - project, bookmark */
 main {
   display: flex;
@@ -113,7 +121,7 @@ main .resume img {
   border: 5px solid #F2E9D8;
 }
 main .resume div{
-  margin-top: 40px;
+  margin-top: 30px;
   width: 330px;
   height: 240px;
 }
@@ -138,7 +146,7 @@ main .project {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 50px;
 }
 main .project .tit-project {
   font-weight: bold;
@@ -195,6 +203,7 @@ main .project .projects .desc-project p{
 main .project .more-project {
   display: flex;
   margin-top: 50px;
+  margin-bottom: 30px;
 }
 main .project .more-project a{
   text-decoration : none;

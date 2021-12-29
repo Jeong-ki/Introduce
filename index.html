@@ -5,22 +5,23 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <link rel="icon" type="image/png" href="./img/me.jpeg">
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/style.css">
   <title>Jeong-kisoo</title>
 </head>
 <body>
-  <header>
+  <header class="home">
     <h1 class="blind">프로젝트 소개 페이지</h1>
-    <nav>
+    <nav class="navbar">
       <h2 class="tit-logo">
         <i class="fas fa-meteor">Jeong</i>
       </h2>
       <ul class="list-nav">
-        <li>Home</li>
-        <li>Resume</li>
-        <li>Project</li>
-        <li>Bookmark</li>
+        <li data-link=".home">Home</li>
+        <li data-link=".resume">Resume</li>
+        <li data-link=".projects">Project</li>
+        <li data-link=".bookmark">Bookmark</li>
         <li><a href="https://velog.io/@jeongki">Blog</a></li>
       </ul>
     </nav>
@@ -118,5 +119,6 @@
       <li><a href="#"><img src="./img/icon-youtube.png" alt="유튜브"></a></li>
     </ul>
   </footer>
+  <script src="./js/main.js"></script>
 </body>
 </html>
