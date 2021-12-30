@@ -112,12 +112,30 @@
         <form class="inp-evaluate">
           <i class="far fa-star"></i>
           <input type="text" placeholder='Press "yes" or "no"' required> 
-          <button>enter</button>
+          <button class="inp-btn">enter</button>
         </form>
       </section>
       <img src="./img/고양이 배경.png" alt="배경이미지" class="img-background">
       <button class="btn-top"></button>
     </section>
+    <div class="modal-yes hidden">
+      <div class="modal_overlay"></div> 
+      <div class="modal_content">
+        <img src="./img/happy-cat.png" alt="행복 고양이">
+        <p class="greeting">Thank you</p>
+        <p>자주 업로드할 예정입니다! 또 보러 와주세요!</p>
+        <button>Okay~</button>
+      </div>
+    </div>
+    <div class="modal-no">
+      <div class="modal_overlay"></div> 
+      <div class="modal_content">
+        <img src="./img/sad-cat.png" alt="슬픈 고양이">
+        <p class="greeting">Thank you..</p>
+        <p>더 업데이트 하겠습니다.. 또 보러 와주세요..</p>
+        <button>Okay..</button>
+      </div>
+    </div>
   </main>
   <footer>
     <i class="fas fa-meteor tit-footer">Jeong</i>

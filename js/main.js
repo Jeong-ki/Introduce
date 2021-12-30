@@ -49,3 +49,21 @@ facebook.addEventListener('click', (event) => {
   const sendUrl = "https://jeong-ki.github.io/10000hoursRules/"; // URL 랜딩페이지로 수정
   window.open("http://www.facebook.com/sharer/sharer.php?u=" + sendUrl);
 });
+
+// press yes or no
+const evaluateForm = document.querySelector('.inp-evaluate');
+const evaluateInput = document.querySelector('.inp-evaluate input');
+const btnInp = document.querySelector('.btn-inp');
+
+evaluateForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const value = evaluateInput.value;
+  console.log(value);
+  if(value.match(/yes/gi) && value.match(/no/gi)) {
+    alert("하나만 입력해주세요!")
+  } else if(value.match(/yes/gi)) {
+    console.log("check yes");
+  } else if(value.match(/no/gi)) {
+    console.log("check no");
+  }
+})

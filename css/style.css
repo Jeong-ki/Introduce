@@ -363,3 +363,60 @@ footer .btn-link li{
 footer .btn-link li a {
   color: white;
 }
+
+/* modal */
+.modal-yes, .modal-no{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal_overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.modal_content {
+  background-image: url("../img/modal-background.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 380px;
+  height: 254px;
+  text-align: center;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+.modal_content img {
+  margin-top: 45px;
+  width: 70px
+}
+.modal_content .greeting {
+  font-size: 24px;
+  color: #D97652;
+  font-weight: 700;
+  margin-top: 12px;
+  margin-bottom: 13px;
+}
+.modal_content p {
+  font-size: 14px;
+}
+.modal_content button {
+  margin-top: 15px;
+  background: #D97652;
+  border-radius: 40px;
+  border: none;
+  width: 80px;
+  height: 29px;
+  color: white;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
