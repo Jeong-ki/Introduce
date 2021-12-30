@@ -32,7 +32,12 @@ header section .desc-introduce {
   width: 350px;
   margin-bottom: 10px;
 }
-header section button {
+header section .contact {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+}
+header section .contact button {
   margin-top: 20px;
   width: 100px;
   height: 40px;
@@ -41,6 +46,18 @@ header section button {
   color: white;
   border: none;
   cursor: pointer;
+}
+header section .contact .btn-me {
+  background-image: url(../img/speech-bubble.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 200px;
+  padding-top: 105px;
+  padding-left: 40px;
+}
+header section .contact .btn-me li{
+  margin-bottom: 15px;
 }
 header img {
   margin-top: 70px;
@@ -80,6 +97,7 @@ nav .list-nav li {
   font-size: 16px;
   transition: all 0.3s;
   cursor: pointer;
+  margin-left: 5px;
 }
 nav .list-nav li:hover {
   background: #D97652;
@@ -94,12 +112,16 @@ nav .list-nav li a {
 nav .list-nav li:hover a {
   color: white;
 }
+nav .list-nav .fa-external-link-alt {
+  font-size: 11px;
+  padding-left: 2px;
+}
 
 .navbar-dark {
   background-color: #f0e2c7;
 }
 
-/* Main - project, bookmark */
+/* Main - project,  evaluate*/
 main {
   display: flex;
   flex-direction: column;
@@ -153,6 +175,9 @@ main .project .tit-project {
   color: #D97652;
   font-size: 28px;
   padding-bottom: 20px;
+}
+main .project p {
+  margin-bottom: 5px;
 }
 
 main .project .projects {
@@ -220,7 +245,7 @@ main .project .more-project a{
   font-size: 14px;
 }
 
-main .project .bookmark{
+main .project .evaluate{
   display: flex;
   width: 620px;
   height: 120px;
@@ -232,36 +257,45 @@ main .project .bookmark{
   align-items: center;
   padding: 0 40px;
 }
-
-main .project .bookmark .inp-bookmark {
+main .project .evaluate .box-ask {
+  margin-top: 5px;
+}
+main .project .evaluate .box-ask p{
+  margin-bottom: 10px;
+}
+main .project .evaluate .inp-evaluate {
   display: flex;
   justify-content: space-between;
   background-color: white;
   height: 35px;
-  width: 275px;
+  width: 255px;
   border-radius: 60px;
 }
-
-main .project .bookmark p {
+main .project .evaluate .inp-evaluate input {
+  margin-left: 10px;
   font-size: 14px;
 }
-main .project .bookmark strong {
+
+main .project .evaluate p {
+  font-size: 13px;
+}
+main .project .evaluate strong {
   font-size: 20px;
 }
 
-main .project .bookmark .inp-bookmark .fa-star{
+main .project .evaluate .inp-evaluate .fa-star{
   margin-top: 9px;
   margin-left: 12px;
   color: darkgray;
 }
 
-main .project .bookmark .inp-bookmark input {
+main .project .evaluate .inp-evaluate input {
   border: none;
   width: 140px;
   outline: none;
 }
 
-main .project .bookmark .inp-bookmark button {
+main .project .evaluate .inp-evaluate button {
   font-size: 12px;
   color: white;
   background: #D97652;
@@ -281,9 +315,10 @@ main .project .img-background {
 }
 
 .btn-top {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
+  display: flex;
+  align-self: end;
+  position: sticky;
+  bottom: 10px;
   background-image: url("../img/scroll-top-btn-1.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -291,6 +326,8 @@ main .project .img-background {
   height: 30px;
   border: none;
   border-radius: 90%;
+  margin-top: -40px;
+  margin-right: 20px;
 }
 .btn-top:hover {
   background-image: url("../img/scroll-top-btn-2.png");
@@ -311,10 +348,18 @@ footer .tit-footer {
 footer .btn-link {
   display: flex;
 }
-footer .btn-link li {
-margin-right: 10px;
-}
-footer .btn-link li img {
+footer .btn-link li{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F29D52;
+  color: white;
   width: 30px;
   height: 30px;
+  margin-right: 10px;
+  border-radius: 90px;
+  cursor: pointer;
+}
+footer .btn-link li a {
+  color: white;
 }

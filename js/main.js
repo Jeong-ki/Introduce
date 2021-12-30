@@ -20,3 +20,32 @@ navbarMenu.addEventListener('click', (event) => {
   const scrollTo = document.querySelector(link);
   scrollTo.scrollIntoView({ behavior: 'smooth', block: "center", inline: "nearest" });
 });
+
+// top button scroll
+const btnTop = document.querySelector('.btn-top');
+btnTop.addEventListener('click', (event) => {
+  const scrollTo = document.querySelector('.home');
+  scrollTo.scrollIntoView({ behavior: 'smooth', block: "center", inline: "nearest" });
+});
+
+
+// contact button - show contact
+const btnContact = document.querySelector('.btn-contact');
+const contactMe = document.querySelector('.btn-me');
+btnContact.addEventListener('click', (event) => {
+  contactMe.classList.toggle('blind');
+});
+
+// share twitter, facebook
+const twitter = document.querySelector('.share-twitter');
+const facebook = document.querySelector('.share-facebook');
+
+twitter.addEventListener('click', (event) => {
+  const sendText = "landing";
+  const sendUrl = "https://jeong-ki.github.io/10000hoursRules/"; // URL 랜딩페이지로 수정
+  window.open("https://twitter.com/intent/tweet?text=" + sendText + "&url=" + sendUrl);
+});
+facebook.addEventListener('click', (event) => {
+  const sendUrl = "https://jeong-ki.github.io/10000hoursRules/"; // URL 랜딩페이지로 수정
+  window.open("http://www.facebook.com/sharer/sharer.php?u=" + sendUrl);
+});

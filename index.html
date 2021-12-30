@@ -22,7 +22,7 @@
         <li data-link=".resume">Resume</li>
         <li data-link=".projects">Project</li>
         <li data-link=".bookmark">Bookmark</li>
-        <li><a href="https://velog.io/@jeongki">Blog</a></li>
+        <li><a href="https://velog.io/@jeongki">Blog <i class="fas fa-external-link-alt"></i></a></li>
       </ul>
     </nav>
     <div class="introduce">
@@ -32,12 +32,19 @@
         <p class="desc-introduce">안녕하세요, 프론트엔드 개발자 정기수입니다.</p>
         <p class="desc-introduce">제가 지금까지 해왔던 프로젝트들 중에서 몇 가지를 뽑아서 소개하기 위해 이 페이지를 제작하였습니다.</p>
         <p class="desc-introduce">엄청난 프로젝트는 아니지만 열심히 참여해서 재미있게 작업하였습니다. 이 페이지도 재미있게 봐주세요!</p>
-        <button>Contact me</button>
+        <div class="contact">
+          <button class="btn-contact">Contact me</button>
+          <ul class="btn-me blind">
+            <li>Email : 7863z@naver.com</li>
+            <li>Github : <a href="https://github.com/Jeong-ki">https://github.com/Jeong-ki</a></li>
+            <li>Blog : <a href="https://velog.io/@jeongki">https://velog.io/@jeongki</a></li>
+          </ul>
+        </div>
       </section>
       <img src="./img/me.jpeg" alt="캐릭터">
     </div>
   </header>
-  <main>
+  <main id="main">
     <section class="resume">
       <h2 class="blind">이력</h2>
       <img src="./img/gwnu.jpg" alt="강릉원주대학교">
@@ -47,7 +54,7 @@
         <p>- 정보처리기사 취득</p>
         <p>- 전공 지식 학습</p>
         <p class="tit-edu"><strong>멋쟁이 사자처럼</strong> ( 2022.10 ~ 2023.01 )</p>
-        <p>- 프론트엔드 기술 학습</p>
+        <p>- 프론트엔드 위주 기술 학습</p>
         <p>- 다양한 구현 과제 수행</p>
         <p>- 개인/팀 프로젝트 진행</p>
       </div>
@@ -55,7 +62,7 @@
     <section class="project">
       <h2 class="tit-project">대표 프로젝트</h2>
       <p>멋쟁이 사자처럼을 통해 많은 것을 배우고 성장하게 되었습니다.</p>
-      <p>그 경험을 통해 자신감을 얻었고 이후에도 계속해서 여러 프로젝트를 진행하고 있습니다.</p>
+      <p>그 경험을 통해 자신감을 얻었고 이후에도 계속해서 여러 프로젝트를 만들어 나가고 있습니다.</p>
       
       <section class="projects">
         <h3 class="blind">프로젝트 세가지</h3>
@@ -92,31 +99,37 @@
       </section>
       <section class="more-project">
         <h2 class="blind">더 보기</h2>
-        <p>여러 프로젝트 중에서 인상깊었던 세 가지를 선정해보았습니다.<br> 깃 허브에서 더 많은 프로젝트를 볼 수 있습니다!</p>
+        <p>여러 프로젝트 중에서 인상깊었던 세 가지를 선정해보았습니다.<br> 이 외에도 깃 허브에서 더 많은 프로젝트를 볼 수 있습니다!</p>
         <a href="https://github.com/Jeong-ki">Show More</a>
       </section>
-      <section class="bookmark">
+      <section class="evaluate">
         <h2 class="blind">북마크, 즐겨찾기</h2>
-        <p><strong>BookMark & Star My Page</strong><br><br>
-        이 페이지가 마음에 드셨나요?<br>
-        북마크하시고 프로젝트 업데이트 소식을 확인하세요!!</p>
-        <form class="inp-bookmark">
+        <div class="box-ask">
+          <p><strong>Did you enjoy it?</strong>( Tell me your opinion )</p>
+          <p>이 페이지가 마음에 드셨다면 YES</p>
+          <p>그렇지 않다, 아쉽다면 NO를 입력해주세요.</p>
+        </div>
+        <form class="inp-evaluate">
           <i class="far fa-star"></i>
-          <input type="text" placeholder='  Enter the "star"' required> 
-          <button>bookmark</button>
+          <input type="text" placeholder='Press "yes" or "no"' required> 
+          <button>enter</button>
         </form>
       </section>
-      <img src="./img/고양이 배경.png" alt="" class="img-background">
+      <img src="./img/고양이 배경.png" alt="배경이미지" class="img-background">
+      <button class="btn-top"></button>
     </section>
   </main>
-  <button class="btn-top"></button>
   <footer>
     <i class="fas fa-meteor tit-footer">Jeong</i>
     <ul class="btn-link">
-      <li><a href="https://velog.io/@jeongki"><img src="./img/icon-blog.png" alt="블로그"></a></li>
-      <li><a href="#"><img src="./img/icon-facebook.png" alt="페이스북"></a></li>
-      <li><a href="#"><img src="./img/icon-insta.png" alt="인스타그램"></a></li>
-      <li><a href="#"><img src="./img/icon-youtube.png" alt="유튜브"></a></li>
+      <li>
+        <a href=""><i class="fab fa-github"></i></a>
+      </li>
+      <li>
+        <a href=""><i class="fab fa-blogger-b"></i></a>
+      </li>
+      <li class="share-twitter"><i class="fab fa-twitter"></i></li>
+      <li class="share-facebook"><i class="fab fa-facebook-f"></i></li>
     </ul>
   </footer>
   <script src="./js/main.js"></script>
