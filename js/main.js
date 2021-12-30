@@ -50,20 +50,41 @@ facebook.addEventListener('click', (event) => {
   window.open("http://www.facebook.com/sharer/sharer.php?u=" + sendUrl);
 });
 
-// press yes or no
+// press yes or no, open modal
 const evaluateForm = document.querySelector('.inp-evaluate');
 const evaluateInput = document.querySelector('.inp-evaluate input');
 const btnInp = document.querySelector('.btn-inp');
+
+const modalYes = document.querySelector('.modal-yes');
+const modalNo = document.querySelector('.modal-no');
+const yesBtnClose = document.querySelector('.yesBtn-close');
+const noBtnClose = document.querySelector('.noBtn-close');
+
+const openModalYes = () => {
+  modalYes.classList.remove("hidden");
+};
+const openModalNo = () => {
+  modalNo.classList.remove("hidden");
+};
 
 evaluateForm.addEventListener("submit", (event) => {
   event.preventDefault();
   const value = evaluateInput.value;
   console.log(value);
   if(value.match(/yes/gi) && value.match(/no/gi)) {
-    alert("하나만 입력해주세요!")
+    alert("하나만 입력해주세요!");
   } else if(value.match(/yes/gi)) {
-    console.log("check yes");
+    openModalYes();
   } else if(value.match(/no/gi)) {
-    console.log("check no");
+    openModalNo();
+  } else {
+    alert("yes 또는 no를 입력해주세요.");
   }
-})
+});
+
+yesBtnClose.addEventListener('click', () => {
+  modalYes.classList.add("hidden");
+});
+noBtnClose.addEventListener('click', () => {
+  modalNo.classList.add("hidden");
+});

@@ -374,6 +374,7 @@ footer .btn-link li a {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1;
 }
 .modal_overlay {
   background-color: rgba(0, 0, 0, 0.6);
