@@ -89,7 +89,6 @@ noBtnClose.addEventListener('click', () => {
   modalNo.classList.add("hidden");
 });
 
-
 // media query
 
 // toggle bar
@@ -102,4 +101,16 @@ btnToggle.addEventListener('click', () => {
 });
 btnBack.addEventListener('click', () => {
   sidebar.classList.add("hidden");
+});
+
+// Handle scrolling when tapping on the sidebar menu
+const navbarMenu2 = document.querySelector('.list-nav2');
+navbarMenu2.addEventListener('click', (event) => {
+  sidebar.classList.add("hidden");
+  const link = event.target.dataset.link;
+  if (link == null) {
+    return;
+  }
+  const scrollTo = document.querySelector(link);
+  scrollTo.scrollIntoView({ behavior: 'smooth', block: "center", inline: "nearest" });
 });
