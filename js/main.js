@@ -88,3 +88,18 @@ yesBtnClose.addEventListener('click', () => {
 noBtnClose.addEventListener('click', () => {
   modalNo.classList.add("hidden");
 });
+
+
+// media query
+
+// toggle bar
+const sidebar = document.querySelector('.nav-toggle-sidebar');
+const btnToggle = document.querySelector('.btn-nav-toggle');
+const btnBack = document.querySelector('.btn-back');
+
+btnToggle.addEventListener('click', () => {
+  sidebar.classList.remove("hidden");
+});
+btnBack.addEventListener('click', () => {
+  sidebar.classList.add("hidden");
+});

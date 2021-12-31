@@ -24,6 +24,9 @@
         <li data-link=".bookmark">Bookmark</li>
         <li><a href="https://velog.io/@jeongki">Blog <i class="fas fa-external-link-alt"></i></a></li>
       </ul>
+      <button class="btn-nav-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
     </nav>
     <div class="introduce">
       <section>
@@ -44,11 +47,26 @@
       <img src="./img/me.jpeg" alt="캐릭터">
     </div>
   </header>
+  <section class="nav-toggle-sidebar hidden">
+    <div class="toggle-open">
+      <div class="toggle_overlay"></div> 
+      <div class="toggle-sidebar">
+        <button class="btn-back"><i class="fas fa-arrow-right"></i></button>
+        <ul>
+          <li data-link=".home">Home</li>
+          <li data-link=".resume">Resume</li>
+          <li data-link=".projects">Project</li>
+          <li data-link=".bookmark">Bookmark</li>
+          <li><a href="https://velog.io/@jeongki">Blog <i class="fas fa-external-link-alt"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
   <main id="main">
     <section class="resume">
       <h2 class="blind">이력</h2>
       <img src="./img/gwnu.jpg" alt="강릉원주대학교">
-      <div>
+      <div class="box-resume">
         <p class="tit-resume">Resume</p>
         <p class="tit-edu"><strong>강릉원주대학교</strong> ( 2016.03 ~ 2022.02 )</p>
         <p>- 정보처리기사 취득</p>
@@ -63,7 +81,6 @@
       <h2 class="tit-project">대표 프로젝트</h2>
       <p>멋쟁이 사자처럼을 통해 많은 것을 배우고 성장하게 되었습니다.</p>
       <p>그 경험을 통해 자신감을 얻었고 이후에도 계속해서 여러 프로젝트를 만들어 나가고 있습니다.</p>
-      
       <section class="projects">
         <h3 class="blind">프로젝트 세가지</h3>
         <div>
@@ -106,8 +123,8 @@
         <h2 class="blind">북마크, 즐겨찾기</h2>
         <div class="box-ask">
           <p><strong>Did you enjoy it?</strong>( Tell me your opinion )</p>
-          <p>이 페이지가 마음에 드셨다면 YES</p>
-          <p>그렇지 않다, 아쉽다면 NO를 입력해주세요.</p>
+          <p class="desc-yes">이 페이지가 마음에 드셨다면 YES</p>
+          <p class="desc-no">그렇지 않다, 아쉽다면 NO를 입력해주세요.</p>
         </div>
         <form class="inp-evaluate">
           <i class="far fa-star"></i>
