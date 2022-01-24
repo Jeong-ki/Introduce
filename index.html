@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
   <link rel="icon" type="image/png" href="./img/me.jpeg">
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/style.css">
   <title>Jeong-kisoo</title>
 </head>
+
 <body>
   <header class="home">
-    <h1 class="blind">프로젝트 소개 페이지</h1>
     <nav class="navbar">
-      <h2 class="tit-logo">
+      <h1 class="tit-logo">
         <i class="fas fa-meteor">Jeong</i>
-      </h2>
+      </h1>
       <ul class="list-nav">
         <li data-link=".home">Home</li>
         <li data-link=".resume">Resume</li>
@@ -28,28 +30,10 @@
         <i class="fas fa-bars"></i>
       </button>
     </nav>
-    <div class="introduce">
-      <section>
-        <h2 class="blind">소개글</h2>
-        <p class="tit-introduce">Introduction of the front-end development project.</p>
-        <p class="desc-introduce">안녕하세요, 프론트엔드 개발자 정기수입니다.</p>
-        <p class="desc-introduce">제가 지금까지 해왔던 프로젝트들 중에서 몇 가지를 뽑아서 소개하기 위해 이 페이지를 제작하였습니다.</p>
-        <p class="desc-introduce">엄청난 프로젝트는 아니지만 열심히 참여해서 재미있게 작업하였습니다. 이 페이지도 재미있게 봐주세요!</p>
-        <div class="contact">
-          <button class="btn-contact">Contact me</button>
-          <ul class="btn-me blind">
-            <li>Email : 7863z@naver.com</li>
-            <li>Github : <a href="https://github.com/Jeong-ki">https://github.com/Jeong-ki</a></li>
-            <li>Blog : <a href="https://velog.io/@jeongki">https://velog.io/@jeongki</a></li>
-          </ul>
-        </div>
-      </section>
-      <img src="./img/me.jpeg" alt="캐릭터">
-    </div>
   </header>
   <section class="nav-toggle-sidebar hidden">
     <div class="toggle-open">
-      <div class="toggle_overlay"></div> 
+      <div class="toggle_overlay"></div>
       <div class="toggle-sidebar">
         <button class="btn-back"><i class="fas fa-arrow-right"></i></button>
         <ul class="list-nav2">
@@ -63,6 +47,24 @@
     </div>
   </section>
   <main id="main">
+    <section class="introduce">
+      <div class="box-introduce">
+        <h2 class="blind">소개글</h2>
+        <p class="tit-introduce">Introduction of the front-end development project.</p>
+        <p class="desc-introduce">안녕하세요, 프론트엔드 개발자 정기수입니다.</p>
+        <p class="desc-introduce">제가 지금까지 해왔던 프로젝트들 중에서 몇 가지를 뽑아서 소개하기 위해 이 페이지를 제작하였습니다.</p>
+        <p class="desc-introduce">엄청난 프로젝트는 아니지만 열심히 참여해서 재미있게 작업하였습니다. 이 페이지도 재미있게 봐주세요!</p>
+        <div class="contact">
+          <button class="btn-contact">Contact me</button>
+          <ul class="btn-me blind">
+            <li>Email : 7863z@naver.com</li>
+            <li>Github : <a href="https://github.com/Jeong-ki">https://github.com/Jeong-ki</a></li>
+            <li>Blog : <a href="https://velog.io/@jeongki">https://velog.io/@jeongki</a></li>
+          </ul>
+        </div>
+      </div>
+      <img src="./img/me.jpeg" alt="캐릭터">
+    </section>
     <section class="resume">
       <h2 class="blind">이력</h2>
       <img src="./img/gwnu.jpg" alt="강릉원주대학교">
@@ -81,9 +83,8 @@
       <h2 class="tit-project">대표 프로젝트</h2>
       <p>멋쟁이 사자처럼을 통해 많은 것을 배우고 성장하게 되었습니다.</p>
       <p>그 경험을 통해 자신감을 얻었고 이후에도 계속해서 여러 프로젝트를 만들어 나가고 있습니다.</p>
-      <section class="projects">
-        <h3 class="blind">프로젝트 세가지</h3>
-        <div>
+      <ul class="projects">
+        <li>
           <a href="https://jeong-ki.github.io/10000hoursRules/">
             <img src="./img/1hoursRules.png" alt="1만 시간의 법칙">
             <div class="desc-project">
@@ -92,8 +93,8 @@
               <p>1만 시간이 될까?</p>
             </div>
           </a>
-        </div>
-        <div>
+        </li>
+        <li>
           <a href="#">
             <img src="./img/gamgul-market.png" alt="감귤 마켓">
             <div class="desc-project">
@@ -102,8 +103,8 @@
               <p>등록하여 홍보하는 SNS</p>
             </div>
           </a>
-        </div>
-        <div>
+        </li>
+        <li>
           <a href="#">
             <img src="./img/open-market.png" alt="오픈 마켓">
             <div class="desc-project">
@@ -112,8 +113,8 @@
               <p>사고팔 수 있는 마켓</p>
             </div>
           </a>
-        </div>
-      </section>
+        </li>
+      </ul>
       <section class="more-project">
         <h2 class="blind">더 보기</h2>
         <p>여러 프로젝트 중에서 인상깊었던 세 가지를 선정해보았습니다.<br> 이 외에도 깃 허브에서 더 많은 프로젝트를 볼 수 있습니다!</p>
@@ -127,30 +128,30 @@
           <p class="desc-no">그렇지 않다, 아쉽다면 NO를 입력해주세요.</p>
         </div>
         <form class="inp-evaluate">
-          <i class="far fa-star"></i>
-          <input type="text" placeholder='Press "yes" or "no"' required> 
-          <button class="inp-btn">enter</button>
+          <label for="txt-yesno"><i class="far fa-star"></i></label>
+          <input id="txt-yesno" type="text" placeholder='Press "yes" or "no"' required>
+          <button type="submit" class="inp-btn">enter</button>
         </form>
       </section>
       <img src="./img/cat-background.png" alt="배경이미지" class="img-background">
-      <button class="btn-top"></button>
+      <button type="button" class="btn-top"></button>
     </section>
     <div class="modal-yes hidden">
-      <div class="modal_overlay"></div> 
+      <div class="modal_overlay"></div>
       <div class="modal_content">
         <img src="./img/happy-cat.png" alt="행복 고양이">
         <p class="greeting">Thank you</p>
         <p>자주 업로드할 예정입니다! 또 보러 와주세요!</p>
-        <button class="yesBtn-close">Okay~</button>
+        <button type="button" class="yesBtn-close">Okay~</button>
       </div>
     </div>
     <div class="modal-no hidden">
-      <div class="modal_overlay"></div> 
+      <div class="modal_overlay"></div>
       <div class="modal_content">
         <img src="./img/sad-cat.png" alt="슬픈 고양이">
         <p class="greeting">Thank you..</p>
         <p>더 업데이트 하겠습니다.. 또 보러 와주세요..</p>
-        <button class="noBtn-close">Okay..</button>
+        <button type="button" class="noBtn-close">Okay..</button>
       </div>
     </div>
   </main>
@@ -158,10 +159,10 @@
     <i class="fas fa-meteor tit-footer">Jeong</i>
     <ul class="btn-link">
       <li>
-        <a href=""><i class="fab fa-github"></i></a>
+        <a href="https://github.com/Jeong-ki"><i class="fab fa-github"></i></a>
       </li>
       <li>
-        <a href=""><i class="fab fa-blogger-b"></i></a>
+        <a href="https://velog.io/@jeongki"><i class="fab fa-blogger-b"></i></a>
       </li>
       <li class="share-twitter"><i class="fab fa-twitter"></i></li>
       <li class="share-facebook"><i class="fab fa-facebook-f"></i></li>
@@ -169,4 +170,5 @@
   </footer>
   <script src="./js/main.js"></script>
 </body>
+
 </html>

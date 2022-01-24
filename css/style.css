@@ -7,39 +7,38 @@
 
 html {
   font-family: 'OTWelcomeRA';
-  width: 100vw;
+  width: 100%;
 }
 
 /* Header */
-header .introduce{
+main .introduce{
   display: flex;
   justify-content: center;
   background-color: #F2E9D8;
   padding-top: 70px;
   height: 500px;
-  width: 100vw;
+  width: 100%;
   /* padding: 0 320px; */
 }
-header section {
+main .introduce .box-introduce {
   padding-top: 100px;
-  margin-right: 40px;
 }
-header section .tit-introduce {
+.introduce .box-introduce .tit-introduce {
   width: 500px;
   font-size: 32px;
   font-weight: 700;
   margin-bottom: 30px;
 }
-header section .desc-introduce {
+.introduce .box-introduce .desc-introduce {
   width: 350px;
   margin-bottom: 10px;
 }
-header section .contact {
+.introduce .box-introduce .contact {
   display: flex;
   justify-content: space-between;
   width: 500px;
 }
-header section .contact button {
+.introduce .box-introduce .contact button {
   margin-top: 20px;
   width: 100px;
   height: 40px;
@@ -49,7 +48,7 @@ header section .contact button {
   border: none;
   cursor: pointer;
 }
-header section .contact .btn-me {
+.introduce .box-introduce .contact .btn-me {
   z-index: 10;
   background-image: url(../img/speech-bubble.png);
   background-size: contain;
@@ -59,10 +58,10 @@ header section .contact .btn-me {
   padding-top: 105px;
   padding-left: 40px;
 }
-header section .contact .btn-me li{
+.introduce .box-introduce .contact .btn-me li{
   margin-bottom: 15px;
 }
-header img {
+.introduce img {
   margin-top: 70px;
   width: 330px;
   height: 330px;
@@ -187,7 +186,7 @@ main .project .projects {
   display: flex;
   margin-top: 30px;
 }
-main .project .projects div{
+main .project .projects li{
   position: relative;
   display: flex;
   flex-direction: column;
@@ -202,12 +201,15 @@ main .project .projects img {
 }
 main .project .projects .desc-project {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   position: absolute;
   top: 8px;
   left: 8px;
-  width: 220px;
-  height: 220px;
+  width: 230px;
+  height: 230px;
+  border: 3px solid #F2E9D8;
   border-radius: 30px;
   background-color: #F2E9D8;
   opacity: 0;
@@ -317,12 +319,12 @@ main .project .evaluate .inp-evaluate button {
 main .project .img-background {
   margin-top: -60px;
   z-index: -1;
-  width: 100vw;
+  width: 100%;
   height: 250px;
 }
 
 .btn-top {
-  display: flex;
+  -webkit-align-self: end;
   align-self: end;
   position: sticky;
   bottom: 10px;
@@ -430,47 +432,57 @@ footer .btn-link li a {
 }
 
 @media screen and (max-width:900px) {
-  header .introduce {
+  .introduce {
     padding-top: 50px;
   }
-  header section {
+  .introduce .box-introduce {
     margin-right: 0;
   }
-  header section .tit-introduce {
+  .introduce .box-introduce .tit-introduce {
     width: 300px;
     font-size: 28px;
   }
-  header section .desc-introduce {
+  .introduce .box-introduce .desc-introduce {
     width: 250px;
   }
-  header section .contact {
+  .introduce .box-introduce .contact {
     width: 350px;
   }
-  header section .contact .btn-me {
+  .introduce .box-introduce .contact .btn-me {
     padding-top: 70px;
   }
-  header section .contact .btn-me li{
+  .introduce .box-introduce .contact .btn-me li{
     margin-bottom: 10px;
   }
 
-  header img {
+  .introduce img {
     width: 290px;
     height: 290px;
     border-radius: 40px;
     border: 5px solid #daa693;
   }
+  .btn-top {
+    align-self: end;
+    position: sticky;
+    bottom: 10px;
+    margin-top: -40px;
+    margin-right: 20px;
+  }
+  .btn-top:hover {
+    background-image: url("../img/scroll-top-btn-2.png");
+  }
 }
 
 @media screen and (max-width:600px) {
   body {
-    width: 100vw;
+    width: 100%;
   }
 
   nav {
     justify-content: space-between;
     height: 60px;
     overflow: hidden;
-    width: 100vw;
+    width: 100%;
   }
   nav .tit-logo {
     margin-left: 23px;
@@ -491,7 +503,7 @@ footer .btn-link li a {
     display: flex;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     height: 100%;
     z-index: 20;
   }
@@ -529,28 +541,28 @@ footer .btn-link li a {
     color: #F29D52;
   }
 
-  header .introduce {
+  .introduce {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-bottom: 250px;
   }
-  header .introduce section {
+  .introduce .box-introduce {
     margin-top: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  header section .desc-introduce {
+  .introduce .box-introduce .desc-introduce {
     width: 285px;
   }
-  header section .contact {
+  .introduce .box-introduce .contact {
     width: 90px;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  header section .contact .btn-me {
+  .introduce .box-introduce .contact .btn-me {
     background-image: none;
     padding-top: 10px;
     padding-left: 20px;
@@ -559,11 +571,11 @@ footer .btn-link li a {
     font-size: 14px;
     margin-top: 0;
   }
-  header section .contact .btn-me li {
+  .introduce .box-introduce .contact .btn-me li {
     margin-left: -10px;
     margin-bottom: 5px;
   }
-  header img {
+  .introduce img {
     width: 240px;
     height: 240px;
   }
@@ -591,21 +603,28 @@ footer .btn-link li a {
     margin-top: 10px;
   }
   main .project {
-    width: 100vw;
+    width: 100%;
   }
   main .project p {
     width: 320px;
   }
 
   main .project .projects img {
-    width: 100px;
-    height: 230px;
     border-radius: 30px;
     border: 2px solid #F2E9D8;
   }
+  main .project .projects {
+    width: 100%;
+    overflow: hidden;
+    overflow-x: scroll;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  main .project .projects::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+  }
   main .project .projects .desc-project {
-    width: 87px;
-    height: 217px;
+    border: 2px solid #F2E9D8;
   }
   main .project .projects .desc-project strong{
     font-size: 18px;
@@ -645,7 +664,7 @@ footer .btn-link li a {
 
   main .project .img-background {
     height: 150px;
-    width: 100vw;
+    width: 100%;
   }
 
   .modal_content {

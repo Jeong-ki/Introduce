@@ -114,3 +114,24 @@ navbarMenu2.addEventListener('click', (event) => {
   const scrollTo = document.querySelector(link);
   scrollTo.scrollIntoView({ behavior: 'smooth', block: "center", inline: "nearest" });
 });
+
+// image slide(scroller)
+function imgSlider() {
+  let slider = document.querySelector('.projects');
+
+  slider.addEventListener('wheel', (e) => {
+      const { scrollLeft, clientWidth, scrollWidth } = slider;
+      // scrollWidth(1500) = clientWidth(370) + scrollLeft(0~1130)
+      if (scrollLeft === 0 && e.deltaY < 0) {
+          return false;
+      }
+      if (scrollLeft + clientWidth >= scrollWidth && e.deltaY > 0) {
+          return false;
+      }
+      e.preventDefault();
+      slider.scrollBy({
+          left: e.deltaY < 0 ? -100 : 100,
+      });
+  });
+}
+imgSlider();
