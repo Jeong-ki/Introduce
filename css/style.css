@@ -319,7 +319,7 @@ main .project .evaluate .inp-evaluate button {
 main .project .img-background {
   margin-top: -60px;
   z-index: -1;
-  width: 100%;
+  width: 100vw;
   height: 250px;
 }
 
